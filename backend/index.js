@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
   origin: [
-    "https://air-vista-h8ijvhfic-adit3107s-projects.vercel.app/",  // deployed frontend
+    "https://air-vista-h8ijvhfic-adit3107s-projects.vercel.app",  // deployed frontend
     "http://localhost:5173"                 // local dev
   ],
   credentials: true
