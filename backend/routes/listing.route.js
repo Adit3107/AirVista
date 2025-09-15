@@ -1,6 +1,7 @@
 import express from "express"
 import isAuth from "../middleware/isAuth.js"
 import upload from "../middleware/multer.js"
+import { getUserListings } from "../controllers/listing.controller.js";
 import { addListing, deleteListing, findListing, getListing, ratingListing, search, updateListing } from "../controllers/listing.controller.js"
 
 let listingRouter = express.Router()
@@ -17,6 +18,7 @@ listingRouter.get("/findlistingByid/:id",isAuth,findListing)
 listingRouter.delete("/delete/:id",isAuth,deleteListing)
 listingRouter.post("/ratings/:id",isAuth,ratingListing)
 listingRouter.get("/search",search)
+listingRouter.get("/mylistings", isAuth, getUserListings);
 
 listingRouter.post("/update/:id",isAuth,upload.fields([
     {name:"image1",maxCount:1},

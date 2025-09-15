@@ -24,25 +24,23 @@ function MyListing() {
     }, [userData]);
 
     const fetchUserListings = async () => {
-        try {
-            setLoading(true);
-            const response = await axios.get(`${serverUrl}/api/listing/my-listings`, {
-                withCredentials: true
-            });
+    try {
+        setLoading(true);
+        const response = await axios.get(`${serverUrl}/api/listing/mylistings`, {
+            withCredentials: true
+        });
 
-            if (response.data.success) {
-                setMyListings(response.data.data);
-            } else {
-                setMyListings([]);
-            }
-        } catch (error) {
-            console.error("Error fetching listings:", error);
-            toast.error("Failed to load your listings");
-            setMyListings([]);
-        } finally {
-            setLoading(false);
-        }
-    };
+        // response.data is already an array
+        setMyListings(response.data);
+    } catch (error) {
+        console.error("Error fetching listings:", error);
+        toast.error("Failed to load your listings");
+        setMyListings([]);
+    } finally {
+        setLoading(false);
+    }
+};
+
 
     if (loading) {
         return (

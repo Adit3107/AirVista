@@ -122,7 +122,7 @@ function Nav() {
                                 )}
                                 <div className='w-full h-[1px] bg-gray-200 my-2'></div>
                                 <li className='w-full px-4 py-2.5 hover:bg-gray-100 cursor-pointer' onClick={() => { navigate("/listingpage1"); setShowpopup(false); }}>List your Home</li>
-                                <li className='w-full px-4 py-2.5 hover:bg-gray-100 cursor-pointer' onClick={() => { navigate("/mylisting"); setShowpopup(false); }}>My Listings</li>
+                                <li className='w-full px-4 py-2.5 hover:bg-gray-100 cursor-pointer' onClick={() => { navigate("/mylistings"); setShowpopup(false); }}>My Listings</li>
                                 <li className='w-full px-4 py-2.5 hover:bg-gray-100 cursor-pointer' onClick={() => { navigate("/mybooking"); setShowpopup(false); }}>My Bookings</li>
                             </ul>
                         </div>

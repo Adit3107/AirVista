@@ -31,7 +31,7 @@ function App() {
       element={userData != null ? <ListingPage2/>:<Navigate to={"/"}/>}/>
       <Route path='/listingpage3'
        element={userData != null ? <ListingPage3/>:<Navigate to={"/"}/>}/>
-      <Route path='/mylisting'
+      <Route path='/mylistings'
        element={userData != null ? <MyListing/>:<Navigate to={"/"}/>}/>
         <Route path='/viewcard'
         element={userData != null ? <ViewCard/>:<Navigate to={"/"}/>}/>

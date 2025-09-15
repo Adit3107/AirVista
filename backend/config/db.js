@@ -18,9 +18,9 @@ export default connectDb
 // import Listing from "../model/listing.model.js";
 
 // const hostIds = [
-//   "68970a5d96da7ffd3e10a217",
-//   "68970b5f96da7ffd3e10a238",
-//   "68970b9196da7ffd3e10a23b"
+//   "68c38ca6cd73822aca7362c3",
+//   "68c38c79cd73822aca7362c0",
+//   "68c38bcdcd73822aca7362bd"
 // ];
 
 // const listings = [
