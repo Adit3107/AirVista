@@ -15,9 +15,12 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:5173",
-    credentials:true
-}))
+  origin: [
+    "https://air-vista-h8ijvhfic-adit3107s-projects.vercel.app/",  // deployed frontend
+    "http://localhost:5173"                 // local dev
+  ],
+  credentials: true
+}));
 
 app.use("/api/auth", authRouter )
 app.use("/api/user", userRouter )
